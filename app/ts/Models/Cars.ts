@@ -8,7 +8,11 @@ export class Cars{
         this._cars.push(car);
     }
 
-    Copy(){
-        return([] as Car[]).concat(this._cars);
+    Copy(): Car[]{
+        //return([] as Car[]).concat(this._cars);
+        //console.log("oLHA AQUI "+ JSON.stringify(this._cars));
+        return this._cars;
+
+        
     }
 }

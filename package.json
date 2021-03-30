@@ -9,5 +9,8 @@
     "start": "tsc -w"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jquery": "^2.0.42"
+  }
 }

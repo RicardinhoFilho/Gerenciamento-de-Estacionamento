@@ -1,22 +1,21 @@
 System.register([], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var Cars;
+    var __moduleName = context_1 && context_1.id;
     return {
         setters: [],
         execute: function () {
-            Cars = (function () {
-                function Cars() {
+            Cars = class Cars {
+                constructor() {
                     this._cars = [];
                 }
-                Cars.prototype.Adiciona = function (car) {
+                Adiciona(car) {
                     this._cars.push(car);
-                };
-                Cars.prototype.Copy = function () {
-                    return [].concat(this._cars);
-                };
-                return Cars;
-            }());
+                }
+                Copy() {
+                    return this._cars;
+                }
+            };
             exports_1("Cars", Cars);
         }
     };
