@@ -1,6 +1,6 @@
 System.register(["../Models/index", "../Views/TableView"], function (exports_1, context_1) {
     "use strict";
-    var index_1, TableView_1, CadastroController;
+    var index_1, TableView_1, CadastroController, Category;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -36,6 +36,11 @@ System.register(["../Models/index", "../Views/TableView"], function (exports_1, 
                 }
             };
             exports_1("CadastroController", CadastroController);
+            (function (Category) {
+                Category[Category["Pequeno"] = 0] = "Pequeno";
+                Category[Category["M\u00E9dio"] = 1] = "M\u00E9dio";
+                Category[Category["Grande"] = 2] = "Grande";
+            })(Category || (Category = {}));
         }
     };
 });

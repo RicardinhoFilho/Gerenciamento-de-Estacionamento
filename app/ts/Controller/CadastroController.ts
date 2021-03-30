@@ -41,9 +41,13 @@ export class CadastroController {
         this._carsList.Adiciona(car);
         this._tableView.update(this._carsList);
 
-        
-
     }
-    
 
+}
+
+enum Category{
+
+    Pequeno,
+    Médio, 
+    Grande
 }

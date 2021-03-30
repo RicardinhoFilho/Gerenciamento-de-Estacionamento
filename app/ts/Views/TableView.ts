@@ -21,7 +21,7 @@ export class TableView {
                     <td scope="col">${carro._placa} </td>
                     <td scope="col"> ${carro._modelo} </td>
                     <td scope="col"> ${carro._cor} </td>
-                    <td scope="col">${carro._classificacao}</td>
+                    <td scope="col">${this.translateCategory(carro._classificacao)}</td>
                     <td scope="col"> ${carro._horario} </td>
                 </tr>
                
@@ -66,4 +66,12 @@ export class TableView {
 
     }
 
+    translateCategory(category: number): string {
+
+        const result: string[] = ['Pequeno', 'Médio', 'Grande'];
+
+        return result[category];
+    }
+
 }
+
