@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Gerenciamento De Estacionamento</title>
+</head>
+
+<body>
+    <h1>Gerencimanto de Estacionamento</h1>
+    <div class="container">
+        <form class="form">
+            <div class="mb">
+                <label for="Placa" class="form-label">Placa</label>
+                <input type="text" class="form-control" id="Placa">
+            </div>
+            <div class="mb">
+                <label for="Carro" class="form-label">Carro</label>
+                <input type="text" class="form-control" id="Carro">
+            </div>
+            <div class="mb">
+                <label for="Cor" class="form-label">Cor</label>
+                <input type="text" class="form-control" id="Cor">
+            </div>
+            <div class="buttonContainer" role="group">
+                <label for="Pequeno" class="radio">Pequeno<input type="radio" value="0" name="Category"></label>
+                <label for="Médio" class="radio">Médio<input type="radio" value="1" name="Category"></label>
+                <label for="Grande" class="radio">Grande<input type="radio" value="2" name="Category"></label>
+
+            </div>
+
+            <button type="submit" class="btn btn-success cadastrar">Cadastrar</button>
+        </form>
+
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Placa</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Cor</th>
+                    <th scope="col">Porte</th>
+                    <th scope="col">Entrada</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">abc1234</th>
+                    <td>Uno</td>
+                    <td>Otto</td>
+                    <td>Prata</td>
+                    <td>13:59</td>
+                </tr>
+        </table>
+        </table>
+    </div>
+
+    <button type="button" class="btn btn-primary"  id="adicionarCarro"   data-toggle="modal" data-target="#modalExemplo">
+        Exibir Resultados
+    </button> 
+
+
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Título do modal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Resultado = 180 reais</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" onsubmit="Adicionar">Salvar mudanças</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+ <!-- <script src="./js/Models/Car.js"></script>
+<script src="./js/Models/Cars.js"></script>
+<script src="./js/Models/index.js"></script>
+<script src="./js/Controller/CadastroController.js"></script>
+<script src="./js/Controller/index.js"></script>
+<script src="./js/app.js"></script>  -->
+<script>
+    System.defaultJSExtensions = true;
+   System.import('js/app.js').catch(err => console.error(err));
+</script>
+
+</html>

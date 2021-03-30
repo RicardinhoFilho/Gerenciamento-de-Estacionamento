@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+}
+
+/*butons---------------------------------------------*/
+.buttonContainer{
+
+    margin-top: 5px;
+}
+
+.radio{
+
+    margin-left: 2em;
+    
+}
+.cadastrar{
+
+    margin-top: 2em;
+    margin-left: 50%;
+}
+
+/*table-----------------------------------------------------------*/
+table{
+    margin-top: 2em;
+}
+
