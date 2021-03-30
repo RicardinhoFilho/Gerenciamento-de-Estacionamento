@@ -66,7 +66,7 @@ export class TableView {
 
     }
 
-    translateCategory(category: number): string {
+    private translateCategory(category: number): string {
 
         const result: string[] = ['Pequeno', 'Médio', 'Grande'];
 
