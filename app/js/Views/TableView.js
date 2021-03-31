@@ -9,34 +9,22 @@ System.register([], function (exports_1, context_1) {
                 constructor(elemento) {
                     this._element = elemento;
                 }
-                template(model) {
-                    let teste = `
+                update(model) {
+                    let tr = document.createElement('tr');
+                    let td = `
         ${model.Copy().map(carro => ` 
-                <tr>
+                
                     <td scope="col">${carro._placa} </td>
                     <td scope="col"> ${carro._modelo} </td>
                     <td scope="col"> ${carro._cor} </td>
                     <td scope="col">${this.translateCategory(carro._classificacao)}</td>
                     <td scope="col"> ${carro._horario} </td>
-                </tr>
+                
                
                 `).join('')};
     `;
-                    this._element.innerHTML = teste;
-                    return;
-                    `
-     ${model.Copy().map(carro => `
-            
-             <td>${carro._placa} < /td>
-             < td > ${carro._modelo} < /td>
-             < td > ${carro._cor} < /td>
-             < td > ${carro._horario} < /td>
-            
-             `).join(' ')};
- `;
-                }
-                update(model) {
-                    this.template(model);
+                    this._element.appendChild(tr);
+                    tr.innerHTML = td;
                 }
                 translateCategory(category) {
                     const result = ['Pequeno', 'Médio', 'Grande'];

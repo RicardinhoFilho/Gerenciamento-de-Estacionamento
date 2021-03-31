@@ -7,9 +7,9 @@ export class CadastroController {
     private _inputCor: string;
     private _inputCategory: number;
 
-    private _tableBody:HTMLElement= document.querySelector(".body");
+    private _tableBody:any= document.querySelector("tbody");
 
-    private _carsList = new Cars();
+    
     private _tableView = new TableView(this._tableBody);
 
 
@@ -19,13 +19,15 @@ export class CadastroController {
        this._inputModelo = inputModelo;
        this._inputCor = inputCor;
        this._inputCategory = inputCategory;
+
+       //this._tableView.update(this._carsList);
     }
 
     //Acção Submit
     Adiciona(): void{
 
         
-
+        let carsList = new Cars();
         const data = new Date();
         let horario=(data.getHours());
 
@@ -34,20 +36,16 @@ export class CadastroController {
         const cor = this._inputCor;
         const category = this._inputCategory;
 
-        console.log(placa);
+        //console.log("Olha isso aqui" + carsList.Copy());
 
         const car = new Car(placa, modelo, cor,category, horario);
 
-        this._carsList.Adiciona(car);
-        this._tableView.update(this._carsList);
+        // console.log("Olha isso aqui");
+
+        carsList.Adiciona(car);
+        this._tableView.update(carsList);
 
     }
 
 }
 
-enum Category{
-
-    Pequeno,
-    Médio, 
-    Grande
-}

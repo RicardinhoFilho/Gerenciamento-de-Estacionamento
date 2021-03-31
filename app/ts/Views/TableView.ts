@@ -10,61 +10,32 @@ export class TableView {
         this._element = elemento;
     }
 
-    template(model: Cars): string {
-
-        let teste = `
+    update(model: Cars): void {
+        let tr = document.createElement('tr')
+        let td = `
         ${model.Copy().map(carro =>
 
 
             ` 
-                <tr>
+                
                     <td scope="col">${carro._placa} </td>
                     <td scope="col"> ${carro._modelo} </td>
                     <td scope="col"> ${carro._cor} </td>
                     <td scope="col">${this.translateCategory(carro._classificacao)}</td>
                     <td scope="col"> ${carro._horario} </td>
-                </tr>
+                
                
                 `
 
 
         ).join('')};
     `
-
-        this._element.innerHTML = teste;
-
-        return
-        `
-     ${model.Copy().map(carro =>
-
-
-            `
-            
-             <td>${carro._placa} < /td>
-             < td > ${carro._modelo} < /td>
-             < td > ${carro._cor} < /td>
-             < td > ${carro._horario} < /td>
-            
-             `
-
-
-        ).join(' ')};
- `
+        this._element.appendChild(tr);
+        tr.innerHTML = td;
     }
 
 
-    update(model: Cars) {
 
-        //model.Copy();
-        //let template: string = this.template(model);
-        //template = template.replace(/<script>[\s\S]*?<\/script>/, '');//Escapando qualquer tipod e script
-        //this._element.innerHTML = template;
-
-        this.template(model);
-
-        //console.log("ESTE" + JSON.stringify(template));
-
-    }
 
     private translateCategory(category: number): string {
 

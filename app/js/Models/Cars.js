@@ -13,7 +13,7 @@ System.register([], function (exports_1, context_1) {
                     this._cars.push(car);
                 }
                 Copy() {
-                    return this._cars;
+                    return [].concat(this._cars);
                 }
             };
             exports_1("Cars", Cars);
